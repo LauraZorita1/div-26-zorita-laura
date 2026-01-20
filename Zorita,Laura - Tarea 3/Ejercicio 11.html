@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Galería de Imágenes</h1>
+
+<section role="gallery" aria-label="Galería de imágenes">
+
+    <div id="imagen1" class="contenedor-imagen"
+         data-imagen-id="1"
+         data-descripcion="Paisaje de montaña"
+         tabindex="0"
+         role="img"
+         aria-label="Imagen de paisaje de montaña">
+        <img src="https://via.placeholder.com/200x150?"
+             alt="Paisaje de montaña"
+             title="Paisaje de montaña">
+    </div>
+
+    <div id="imagen2" class="contenedor-imagen"
+         data-imagen-id="2"
+         data-descripcion="Playa"
+         tabindex="0"
+         role="img"
+         aria-label="Imagen de playa al atardecer">
+        <img src="https://via.placeholder.com/200x150?"
+             alt="Playa"
+             title="Playa">
+    </div>
+
+    <div id="imagen3" class="contenedor-imagen"
+         data-imagen-id="3"
+         data-descripcion="Bosque"
+         tabindex="0"
+         role="img"
+         aria-label="Imagen de bosque verde">
+        <img src="https://via.placeholder.com/200x150?"
+             alt="Bosque"
+             title="Bosque">
+    </div>
+
+</section>
+
+<dialog aria-label="Vista ampliada de imagen">
+    <img src="https://via.placeholder.com/400x300?"
+         alt="Imagen ampliada">
+    <p>Descripción de la imagen</p>
+</dialog>
+</body>
+</html>
