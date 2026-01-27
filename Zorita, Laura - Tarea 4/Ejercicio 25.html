@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        --color-principal: #27ae60;
+        --color-secundario: #2980b9;
+        --color-fondo: #f5f5f5;
+        --color-texto: #333333;
+        --espacio-base: 16px;
+    }
+    .lista-productos {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--espacio-base);
+        background-color: var(--color-fondo);
+    }
+    .producto {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: var(--espacio-base);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+    }
+    .producto:hover {
+        transform: translateY(-5px);
+    }
+    .producto.agotado {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+    .producto.nuevo {
+        border: 2px solid var(--color-principal);
+    }
+    .nuevo::before {
+        content: "Nuevo";
+        display: inline-block;
+        background-color: var(--color-principal);
+        color: white;
+        padding: 2px 6px;
+        font-size: 0.8em;
+        border-radius: 4px;
+        margin-bottom: var(--espacio-base);
+    }
+    .agotado::after
+    {
+        content: "Agotado";
+        display: inline-block;
+        background-color: #e74c3c;
+        color: white;
+        padding: 2px 6px;
+        font-size: 0.8em;
+        border-radius: 4px;
+        margin-bottom: var(--espacio-base);
+    }
+    .descripcion {
+        font-size: 0.9em;
+        color: var(--color-texto);
+        margin: var(--espacio-base) 0;
+    }
+    .descripcion::first-line{
+        font-weight: bold;
+    }
+    .precio-original {
+        text-decoration: line-through;
+        color: #888;
+        margin-right: var(--espacio-base);
+    }
+    .precio-descuento {
+        color: var(--color-principal);
+        font-weight: bold;
+    }
+    .boton-comprar {
+        background-color: var(--color-secundario);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .boton-comprar:hover {
+        background-color: #1c5980;
+    }
+        
+</style>
+<body>
+<ul class="lista-productos">
+        
+        <li class="producto">
+            <h2>Auriculares</h2>
+            <p class="descripcion">Calidad de sonido inmersiva para profesionales. <br>Incluye estuche de carga inalámbrica y cancelación de ruido.</p>
+            <div>
+                <span class="precio-original">120.00€</span>
+                <span class="precio-descuento">89.99€</span>
+            </div>
+            <button class="boton-comprar">Añadir al carrito</button>
+        </li>
+
+        <li class="producto agotado">
+            <h2>Apple watch</h2>
+            <p class="descripcion">Monitoriza tu salud las 24 horas del día. <br>Resistente al agua y con batería de larga duración.</p>
+            <div>
+                <span class="precio-original">200.00€</span>
+                <span class="precio-descuento">150.00€</span>
+            </div>
+            <button class="boton-comprar">Añadir al carrito</button>
+        </li>
+
+        <li class="producto nuevo">
+            <h2>Cámara</h2>
+            <p class="descripcion">Graba tus aventuras con la máxima resolución. <br>Lente gran angular y estabilización óptica.</p>
+            <div>
+                <span class="precio-original">350.00€</span>
+                <span class="precio-descuento">299.99€</span>
+            </div>
+            <button class="boton-comprar">Añadir al carrito</button>
+        </li>
+
+        <li class="producto">
+            <h2>Mochila</h2>
+            <p class="descripcion">Diseño ergonómico y materiales impermeables. <br>Perfecta para llevar tu portátil y accesorios diarios.</p>
+            <div>
+                <span class="precio-original">60.00€</span>
+                <span class="precio-descuento">45.00€</span>
+            </div>
+            <button class="boton-comprar">Añadir al carrito</button>
+        </li>
+
+    </ul>
+</body>
+</html>

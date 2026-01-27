@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, max-content);
+        gap: 20px;
+        align-items: center;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        border: 2px solid var(--btn-color);
+        background-color: var(--btn-color);
+        color: white;
+        border-radius: 20px;
+    }
+    .btn::after{
+        content: "4";
+        background-color: #dc3545;
+        color: white;
+        border-radius: 12px;
+        padding: 2px 6px;
+        margin-top: -20px;
+        margin-left: 10px;
+        position: absolute;
+
+    }
+
+    .btn--blue {
+        --btn-color: #007bff;
+    }
+
+    .btn--grey {
+        --btn-color: #6c757d;
+    }
+
+    .btn--green {
+        --btn-color: #28a745;
+    }
+
+    .btn--red {
+        --btn-color: #dc3545;
+    }
+
+    .btn--yellow {
+        --btn-color: #ffc107;
+    }
+
+    .btn--aqua {
+        --btn-color: #17a2b8;
+    }
+
+    .btn--white {
+        --btn-color: #f8f9fa;
+        color: black;
+    }
+
+    .btn--black {
+        --btn-color: #343a40;
+    }
+</style>
+<body>
+    <div class="container">
+        <button class="btn btn--blue">Primary</button>
+        <button class="btn btn--grey">Secondary</button>
+        <button class="btn btn--green">Success</button>
+        <button class="btn btn--red">Danger</button>
+        <button class="btn btn--yellow">Warning</button>
+        <button class="btn btn--aqua">info</button>
+        <button class="btn btn--white">Light</button>
+        <button class="btn btn--black">Dark</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        gap: 20px;
+        align-items: center;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 2px solid var(--btn-color);
+        background-color: var(--btn-color);
+        color: white;
+    }
+
+    .btn--blue {
+        --btn-color: #007bff;
+}
+
+    .btn--orange {
+        --btn-color: #ff9800;
+    }
+
+    .btn--red {
+        --btn-color: #dc3545;
+    }
+
+    .btn--outline {
+        background-color: transparent;
+        color: var(--btn-color);
+    }
+
+
+    .btn--link {
+        background-color: transparent;
+        border-color: transparent;
+        color: var(--btn-color);
+        text-decoration: underline;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <button class="btn btn--blue">Más información</button>
+        <button class="btn btn--blue btn--outline">Más información</button>
+        <button class="btn btn--blue btn--link">Más información</button>
+
+        <button class="btn btn--orange">Más información</button>
+        <button class="btn btn--orange btn--outline">Más información</button>
+        <button class="btn btn--orange btn--link">Más información</button>
+
+        <button class="btn btn--red">Más información</button>
+        <button class="btn btn--red btn--outline">Más información</button>
+        <button class="btn btn--red btn--link">Más información</button>
+    </div>
+</body>
+</html>

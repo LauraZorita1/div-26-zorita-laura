@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        --color-primario: #3498db;
+        --color-secundario: #2ecc71;
+        --color-fondo: #ecf0f1;
+        --color-fondo-hover: #bdc3c7;
+        --espaciao-base: 16px;
+    }
+    .card {
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            width: 300px;
+            padding: calc(var(--espacio-base) * 2);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+    .card:hover {
+            background-color: var(--color-fondo-hover);
+        }
+    .perfil-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--color-primario);
+            margin-bottom: var(--espacio-base);
+        }
+    .username {
+            font-size: 1.5em;
+            margin-bottom: var(--espacio-base);
+        }
+    .username::before {
+            font-size: 0.8em;
+            color: var(--color-primario);
+        }
+    .bio {
+            font-size: 1em;
+            margin-bottom: calc(var(--espacio-base) * 2);
+        }
+    .links {
+            margin-bottom: var(--espacio-base);
+            font-size: 0.9em;
+        }
+    .links a {
+            color: var(--color-primario);
+            text-decoration: none;
+            margin: 0 var(--espacio-base);
+        }
+    links a:hover {
+            text-decoration: underline;
+            color: var(--color-secundario);
+        }
+    .btn-seguir {
+            background-color: var(--color-secundario);
+            color: white;
+            border: none;
+            padding: calc(var(--espacio-base) / 2) var(--espacio-base);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+</style>
+<body>
+    <div class="card">
+        <img src="https://placehold.co/100x50" alt="Foto" class="perfil-img">
+        
+        <h2 class="username">Laura Zorita</h2>
+        
+        <p class="bio">
+            Desarrollador web apasionado por la tecnología y el codigo abierto
+
+        <div class="links">
+            <a href="#">Portafolio</a> 
+        </div>
+
+        <button class="btn-seguir">Seguir</button>
+    </div>
+
+</body>
+</html>
