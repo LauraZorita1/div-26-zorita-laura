@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 30px;
+}
+
+
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+</style>
+<body>
+    <nav class="navbar">
+    <div class="logo">
+        MiLogo
+    </div>
+
+    <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Sobre mí</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</nav>
+</body>
+</html>

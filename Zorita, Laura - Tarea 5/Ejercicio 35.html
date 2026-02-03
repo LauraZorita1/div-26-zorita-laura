@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 35</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #222;
+            color: white;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        .menu ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            justify-content: center;
+        }
+
+        .banner {
+            position: sticky;
+            top: 50px;
+            background: #4aa3b8;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            z-index: 500;
+        }
+
+        .tarjetas {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 60px;
+        }
+
+        .tarjeta {
+            width: 200px;
+            padding: 20px;
+            background: #ccc;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+        }
+
+        .contenedor-scroll {
+            width: 80%;
+            height: 150px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            overflow-y: scroll;
+            border: 2px solid #333;
+        }
+
+        .visible {
+            background: #c8e6c9;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .invisible {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="menu">
+        <ul>
+            <li>Inicio</li>
+            <li>Sección 1</li>
+            <li>Sección 2</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <h2>Bienvenido a la Página Compleja</h2>
+        <p>Este banner permanece visible mientras haces scroll</p>
+    </div>
+
+    <section class="tarjetas">
+        <div class="tarjeta">Tarjeta 1</div>
+        <div class="tarjeta">Tarjeta 2</div>
+        <div class="tarjeta">Tarjeta 3</div>
+    </section>
+
+    <div class="contenedor-scroll">
+        <div class="visible">Este contenido es visible</div>
+        <div class="invisible">Este contenido es invisible</div>
+        <p>
+            Contenido desplazable
+        </p>
+    </div>
+
+</body>
+</html>

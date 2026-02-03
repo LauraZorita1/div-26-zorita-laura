@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        margin: 0 auto;
+        padding: 20px;
+        color: white;
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+    }
+    .rojo {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: relative;
+        z-index: 1;
+    }
+    .verde {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        position: relative;
+        top: -150px;
+        left: 50px;
+        z-index: 2;
+    }
+    .azul {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        position: relative;
+        top: -300px;
+        left: 100px;
+        z-index: 3;
+    }
+</style>
+<body>
+    <h1>Cajas apiladas con z-index</h1>
+    <div class="rojo">caja 1</div>
+    <div class="verde">caja 2</div>
+    <div class="azul">caja 3</div>
+</body>
+</html>

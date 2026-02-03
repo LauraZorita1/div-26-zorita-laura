@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   /* Contenedor principal de la tabla de precios */
+.pricing-container {
+    display: flex;                  /* Activamos Flexbox */
+    justify-content: space-between; /* Espacio uniforme entre planes */
+    gap: 20px;                      /* Espacio entre columnas */
+    padding: 40px;
+    flex-wrap: wrap;                /* Permite que se acomoden en móviles */
+    background-color: #f5f5f5;
+}
+
+/* Estilos generales de cada plan */
+.plan {
+    flex: 1 1 30%;                  /* Cada plan ocupa aproximadamente 30% del contenedor */
+    background-color: white;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el botón quede abajo si el contenido es desigual */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto al pasar el cursor sobre el plan */
+.plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Precio */
+.price {
+    font-size: 2rem;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Lista de características */
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.plan li {
+    margin: 10px 0;
+}
+
+/* Botón */
+.plan button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.plan button:hover {
+    background-color: #45a049;
+}
+
+/* Plan destacado */
+.plan.featured {
+    background-color: #ffeb3b;
+    transform: scale(1.05);          /* Ligeramente más grande */
+}
+
+.plan.featured button {
+    background-color: #f57c00;
+}
+
+.plan.featured button:hover {
+    background-color: #ef6c00;
+}
+
+</style>
+<body>
+    <div class="plan">
+    <div class="precios">
+        <h1>Titulo</h1>
+        <p>100€</p>
+        <ul>
+            <li>caracteristica 1</li>
+            <li>caracteristica 2</li>
+            <li>Caracteristica 3</li>
+        </ul>
+        <button>comprar</button>
+    </div>
+    <div class="precios">
+        <h1>Titulo 2</h1>
+        <p>100€</p>
+        <ul>
+            <li>caracteristica 1</li>
+            <li>caracteristica 2</li>
+            <li>Caracteristica 3</li>
+        </ul>
+        <button>comprar</button>
+    </div>
+    <div class="precios">
+        <h1>Titulo 3</h1>
+        <p>100€</p>
+        <ul>
+            <li>caracteristica 1</li>
+            <li>caracteristica 2</li>
+            <li>Caracteristica 3</li>
+        </ul>
+        <button>comprar</button>
+    </div>
+    </div>
+</body>
+</html>

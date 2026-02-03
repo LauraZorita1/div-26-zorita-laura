@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarjetas con Flexbox</title>
+  <style>
+    /* Contenedor de tarjetas */
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;           /* Permite varias filas */
+      gap: 20px;                 /* Espacio uniforme entre tarjetas */
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    /* Tarjeta */
+    .tarjeta {
+      display: flex;
+      flex-direction: column;    /* Contenido en columna */
+      flex: 1 1 250px;           /* Se ajustan al ancho disponible */
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* Imagen */
+    .tarjeta img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    /* Contenido */
+    .contenido {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;              /* Fuerza misma altura */
+    }
+
+    .contenido h3 {
+      margin: 0 0 10px;
+    }
+
+    .contenido p {
+      margin: 0;
+      flex-grow: 1;              /* Empuja el contenido y equilibra alturas */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <div class="tarjeta">
+      <img src="https://via.placeholder.com/400x300" alt="Producto 1">
+      <div class="contenido">
+        <h3>Producto 1</h3>
+        <p>Descripción corta del producto.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://via.placeholder.com/400x300" alt="Producto 2">
+      <div class="contenido">
+        <h3>Producto 2</h3>
+        <p>Descripción un poco más larga para demostrar que todas las tarjetas
+        mantienen el mismo alto aunque el contenido cambie.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://via.placeholder.com/400x300" alt="Producto 3">
+      <div class="contenido">
+        <h3>Producto 3</h3>
+        <p>Otra descripción.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

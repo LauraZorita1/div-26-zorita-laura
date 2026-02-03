@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Flotante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Contenedor principal de la galería */
+        .galeria {
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow: auto; 
+        }
+
+        /* Cajas de las imágenes (Las cajas flotantes) */
+        .caja-imagen {
+            float: left;
+            width: 30%;
+            margin: 1.5%;           /* Margen para separarlas */
+            background-color: #eee;
+            padding: 10px;
+            box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .caja-imagen img {
+            max-width: 100%;        /* La imagen se adapta al tamaño de la caja */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Elemento para limpiar los flotados (El uso de CLEAR) */
+        .limpiar {
+            clear: both;            /* 2. AQUÍ USAMOS CLEAR: Rompe el flujo flotante */
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+
+        /* Estilo para el pie de página */
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            clear: both; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Galería de Imágenes</h1>
+
+    <div class="galeria">
+        <div class="caja-imagen">
+            <img src="https://via.placeholder.com/150/92c952" alt="Imagen 1">
+            <p>Imagen 1</p>
+        </div>
+        <div class="caja-imagen">
+            <img src="https://via.placeholder.com/150/771796" alt="Imagen 2">
+            <p>Imagen 2</p>
+        </div>
+        <div class="caja-imagen">
+            <img src="https://via.placeholder.com/150/24f355" alt="Imagen 3">
+            <p>Imagen 3</p>
+        </div>
+
+        <div class="caja-imagen">
+            <img src="https://via.placeholder.com/150/d32776" alt="Imagen 4">
+            <p>Imagen 4</p>
+        </div>
+        <div class="caja-imagen">
+            <img src="https://via.placeholder.com/150/f66b97" alt="Imagen 5">
+            <p>Imagen 5</p>
+        </div>
+        <div class="caja-imagen">
+            <img src="https://via.placeholder.com/150/56a8c2" alt="Imagen 6">
+            <p>Imagen 6</p>
+        </div>
+
+        <div class="limpiar"></div>
+    </div>
+
+    <footer>
+        <p>Fin de la galería </p>
+    </footer>
+
+</body>
+</html>
